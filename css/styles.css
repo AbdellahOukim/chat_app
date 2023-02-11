@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300&display=swap');
+:root {
+    --main-color : #111B21 ;
+    --second-color : #202C33 ;
+    --light-color : #AEBAC1 ;
+    --green-color : #06a34a ;
+}
+*{
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    background-color: var(--main-color);
+    width: 5px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--light-color);
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    height: 100vh;
+}
+a, a:visited {
+    color: inherit;
+    text-decoration: none;
+}
+.error {
+    color: red ;
+    padding: 10px;
+}
+.app {
+    margin: auto;
+    width: 350px;
+    max-height: 460px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    color: #FFF;
+    overflow-x: hidden;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.sticky {
+    position: sticky;
+    left: 0;
+    top: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.header {
+    padding: 20px 15px;
+    background-color: var(--second-color);
+    color: var(--light-color);
+    display: flex;
+    justify-content: space-between;
+}
+.header h3 {
+    margin: 0;
+}
+.header .icons {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+.header .profile {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.header img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.tabs {
+    background-color: var(--second-color);
+    list-style: none;
+    margin: 0;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+}
+.tabs li {
+    flex: 1;
+    padding: 15px 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 14px;
+    position: relative;
+    cursor: pointer;
+}
+.tabs li.active::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background-color: var(--green-color);
+    left: 0;
+    bottom: 0px;
+}
+.tabs li:hover ,
+.tabs li.active {
+    color : var(--green-color) ;
+}
+.message-container {
+    display: flex;
+    flex-direction: column;
+}
+.chat {
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    cursor: pointer;
+}
+.chat:hover {
+    background-color: var(--second-color);
+}
+.chat img {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+}
+.chat h4 ,.chat p {
+    margin: 0;
+}
+
+.chat p {
+    padding-top: 5px;
+    font-size: 14px;
+}
+.discusion {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+}
+.discusion p {
+    margin: 0;
+}
+.discusion > div {
+    width: fit-content;
+    padding: 8px 10px;
+}
+.discusion .send {
+    align-self: flex-end ;
+    background-color: var(--green-color);
+    border-radius: 20px 0 20px 20px;
+}
+.discusion .receive {
+    align-self: flex-start ;
+    background-color: var(--second-color);
+    border-radius: 0 20px 20px 20px;
+}
+.message-area {
+    margin: 8px 15px;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    position: sticky;
+    left: 0;
+    bottom: 0px;
+    background-color: var(--main-color);
+}
+.message-input {
+    width: 280px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--second-color);
+    border-radius: 20px;
+    padding: 10px;
+}
+.message-input svg {
+    color: var(--light-color);
+    font-size: 18px;
+}
+.message-input input {
+    border: none;
+    outline: none;
+    background: none;
+    color: #FFF;
+}
+.message-input input::placeholder {
+    color : var(--light-color) ;
+    font-size: 17px;
+}
+.send-area {
+    height: 38px;
+    width: 38px;
+    background-color: var(--green-color);
+    color: #FFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.send-area svg {
+    font-size: 15px;
+}
+.login form {
+    width: 80%;
+    margin: 20px auto;
+    text-align: center;
+}
+.login form .group {
+    margin-top: 10px;
+}
+.login form .group input {
+    width: 100%;
+    height: 35px;
+    margin-top: 5px;
+    font-family: 'Montserrat', sans-serif;
+    outline: none;
+    border: none;
+    background-color: var(--second-color);
+    color : #FFF ;
+    text-indent: 5px;
+}
+.login form .group input::placeholder {
+    color: var(--light-color);
+}
+.login-btn {
+    width: 100%;
+    margin-top: 25px;
+    padding: 12px 10px;
+    outline: none;
+    border: none;
+    background-color: var(--green-color);
+    color: #FFF;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
